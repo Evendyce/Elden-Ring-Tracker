@@ -1,8 +1,7 @@
 {
   "routes": [
-    { "id": "ranni", "name": "Ranni Route (Completionist)", "file": "ranni.json" },
-    { "id": "all_endings", "name": "All Endings (everything)", "file": "all_endings.json" },
-    { "id": "challenge_rl1", "name": "Challenge — RL1 No-Upgrade", "file": "challenge_rl1.json" }
+    { "id": "ranni", "name": "Ranni Route (Completionist)", "file": "ranni.json" }
   ],
   "default": "ranni"
+
 }
