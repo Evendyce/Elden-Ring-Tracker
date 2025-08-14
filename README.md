@@ -169,17 +169,57 @@ Each route file (`public/data/*.json`) has a simple shape:
 
 ---
 
-## 🗺️ Roadmap / planned features
+## 🗺️ Roadmap
 
-* **Markdown export** (grouped by phase with ✅/⬜ markers for sharing).
-* **More routes:** All‑Endings route, Challenge runs (e.g., RL1, NG+), DLC permutations.
-* **Micro‑beats expansion:** every catacomb/evergaol fully broken out per region.
-* **NPC quest helpers:** dynamic hints for when a step becomes available.
-* **Search params:** include search text and filters in the URL for sharable views.
-* **Mobile niceties:** sticky section headers, bigger taps, optional compact mode.
-* **Optional cloud sync** (behind a toggle) via GitHub Gist or a simple backend.
+### ✅ Already shipped
+- [x] Routes dropdown (data-driven via `public/data/manifest.json`)
+- [x] Per-route progress (localStorage, namespaced by route)
+- [x] Collapsible phases & sections (single-column layout)
+- [x] Type filters + search + “Incomplete only”
+- [x] Shift-click to toggle a whole section
+- [x] Custom items (Phase 1 → “Custom”)
+- [x] Export/Import progress (JSON)
+- [x] Route deep-linking via `?route=...`
+- [x] GitHub Pages deployment (Actions)
 
-> Have ideas? Open an issue or PR!
+
+### P1 — UX & Sharing (next up)
+- [ ] **Markdown export** (per-route, grouped by phase with ✅/⬜)
+- [ ] **Deep links / URL params** beyond route  
+      Include `q=<search>`, `filters=boss,npc,...`, `incomplete=1`
+- [ ] **Theme selector** (multiple palettes, persisted in localStorage)  
+      _Optional:_ route-suggested default theme via manifest
+
+
+### P2 — Data & Content
+- [ ] **Route Builder UI** (create/edit routes without hand-editing JSON)
+  - [ ] Route metadata editor (id, name, defaultTheme)
+  - [ ] Phase/section/item editors with type picker
+  - [ ] Import existing route → edit → re-export
+  - [ ] **Export `your-route.json`** + **manifest patch** snippet
+  - [ ] **“Try this route”** (inject into session without writing files)
+- [ ] **More routes**
+  - [ ] All-Endings route
+  - [ ] Challenge runs (RL1 / NG+)
+  - [ ] DLC permutations
+- [ ] **Micro-beats expansion** (every catacomb/evergaol broken out per region)
+
+
+### P3 — Logic & Gameplay
+- [ ] **NPC quest helpers**  
+      Contextual hints + “now available” nudges based on completed steps
+- [ ] **Missable guards**  
+      Soft warnings for timing-sensitive items (e.g., Bolt of Gransax pre-Ashen Capital)
+
+
+### P4 — Mobile & Infra
+- [ ] **Mobile polish**
+  - [ ] Sticky section headers
+  - [ ] Larger tap targets
+  - [ ] Compact mode toggle
+- [ ] **Optional cloud sync** (behind a toggle) via GitHub Gist backup/restore
+- [ ] **CI checks**  
+      Validate route JSON against schema on PRs (fail fast on bad data)
 
 ---
 
