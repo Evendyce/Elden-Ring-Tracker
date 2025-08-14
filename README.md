@@ -204,8 +204,11 @@ PRs welcome! Please keep PRs small and focused.
 ---
 
 ## 📝 License
+**Code:** MIT — see `LICENSE`.
 
-MIT — see `LICENSE`
+**Guide Content:** CC BY‑NC‑SA 4.0 — see `CONTENT_LICENSE.md`.
+
+**Trademarks:** This is a fan‑made project; see `DISCLAIMER.md`.
 
 ---
 
