@@ -1,6 +1,8 @@
-// Elden Ring Tracker — app.v5 (patched)
+// Elden Ring Tracker — app.v5 (patched++)
 // - Hardened route loading with JSON/schema validation + friendly errors
 // - Drag & drop: move checklist items between sections/phases (session-only)
+// - Preserve open/closed state of phases & sections across renders
+// - Preserve scroll position on re-render to avoid page jumps
 // - All prior features preserved (filters, search, export/import, custom items, shift-click)
 
 const MANIFEST_URL = "data/manifest.json";
@@ -87,6 +89,19 @@ function moveItemToSection(itemId, targetPhaseId, targetSectionIdx){
   render();
 }
 
+// ---------- open-state capture ----------
+function captureOpenState(){
+  const phasesOpen = new Set();
+  const sectionsOpen = new Set();
+  // top-level phase cards
+  board.querySelectorAll('details.card[data-phase-id]').forEach(d => { if (d.open) phasesOpen.add(d.dataset.phaseId); });
+  // section details
+  board.querySelectorAll('details[data-phase-id][data-section-index]').forEach(d => {
+    if (d.open) sectionsOpen.add(`${d.dataset.phaseId}|${d.dataset.sectionIndex}`);
+  });
+  return { phasesOpen, sectionsOpen };
+}
+
 // ---------- UI ----------
 function renderFilters(){
   filtersBar.innerHTML = '';
@@ -100,12 +115,17 @@ function renderFilters(){
 }
 
 function render(){
+  // Preserve scroll + open state before we wipe/rebuild
+  const scrollX = window.scrollX, scrollY = window.scrollY;
+  const prevState = captureOpenState();
+
   if(!PHASES.length){ $('globalProgress').innerHTML = 'No phases for this route.'; return; }
   board.innerHTML = '';
   let total=0, done=0;
 
   PHASES.forEach(phase=>{
-    const card = el('details',{class:'card', open:true});
+    const isOpen = prevState?.phasesOpen?.has(phase.id) ?? true; // default open on first render
+    const card = el('details',{class:'card', open:isOpen?true:null, dataset:{phaseId:phase.id}});
     const head = el('summary', {});
     const title = el('div',{class:'title'},
       el('span',{class:'phase-tag'}, phase.tag||'Phase'),
@@ -120,7 +140,9 @@ function render(){
     head.append(title, prog); card.append(head);
 
     (phase.sections||[]).forEach((sec, secIdx)=>{
-      const det=el('details',{open:true});
+      const key = `${phase.id}|${secIdx}`;
+      const secOpen = prevState?.sectionsOpen?.has(key) ?? true; // default open on first render
+      const det=el('details',{open:secOpen?true:null, dataset:{phaseId:phase.id, sectionIndex:String(secIdx)}});
       const sum=el('summary',{}, el('span',{}, sec.name, ' ', el('span',{class:'sublabel'}, `(${(sec.items||[]).length})`)), el('span',{class:'small muted'},'Toggle'));
       const cont=el('div',{class:'section', dataset:{phase:phase.id, sectionIndex:secIdx}});
 
@@ -165,6 +187,9 @@ function render(){
   });
 
   $('globalProgress').innerHTML = `<strong>Global Progress:</strong> ${done}/${total} (${total?Math.round(done/total*100):0}%)`;
+
+  // Restore scroll so checking an item doesn't jump the page
+  window.scrollTo(scrollX, scrollY);
 }
 
 // ---------- events ----------
@@ -209,26 +234,50 @@ addCustom?.addEventListener('click', ()=>{
 
 // ---------- route loading ----------
 async function loadRoute(routeId, manifest){
-  const route = manifest.routes.find(r=>r.id===routeId) || manifest.routes.find(r=>r.id===manifest.default);
+  const pickRoute = (id) => {
+    if (!manifest || !Array.isArray(manifest.routes) || manifest.routes.length === 0) return null;
+    return manifest.routes.find(r => r.id === id)
+        || manifest.routes.find(r => r.id === manifest.default)
+        || manifest.routes[0];
+  };
+
+  const route = pickRoute(routeId);
+  if (!route) {
+    $('globalProgress').innerHTML = '⚠️ No routes found in manifest.';
+    console.error('Manifest has no routes.');
+    return;
+  }
   ROUTE_ID = route.id;
 
   try {
     const res = await fetch(`data/${route.file}`, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status} while loading ${route.file}`);
     const text = await res.text();
-    let data; try { data = JSON.parse(text); } catch (parseErr) { throw new Error(`Invalid JSON in ${route.file}: ${parseErr.message}`); }
+
+    let data;
+    try { data = JSON.parse(text); }
+    catch (parseErr) { throw new Error(`Invalid JSON in ${route.file}: ${parseErr.message}`); }
+
     const errs = validateRoute(data);
-    if (errs.length) throw new Error(`Route schema errors:\n- ${errs.slice(0,8).join('\n- ')}${errs.length>8?`\n…and ${errs.length-8} more.`:''}`);
+    if (errs.length) {
+      const parts = ['Route schema errors:', ...errs.slice(0, 8).map(e => `- ${e}`)];
+      if (errs.length > 8) parts.push(`…and ${errs.length - 8} more.`);
+      throw new Error(parts.join('\n'));
+    }
 
     PHASES = data.phases || [];
     STATE = JSON.parse(localStorage.getItem(keyFor(ROUTE_ID)) || '{}');
-    routeSelect.value = ROUTE_ID;
+    if (routeSelect) routeSelect.value = ROUTE_ID;
 
-    const u = new URL(location.href); u.searchParams.set('route', ROUTE_ID); history.replaceState(null, '', u);
+    const u = new URL(location.href);
+    u.searchParams.set('route', ROUTE_ID);
+    history.replaceState(null, '', u);
     localStorage.setItem('er-route-last', ROUTE_ID);
 
     render();
   } catch (err) {
-    $('globalProgress').innerHTML = `⚠️ Failed to load route <strong>${escapeHTML(ROUTE_ID)}</strong>:<br><code>${escapeHTML(err.message)}</code>`;
+    $('globalProgress').innerHTML =
+      `⚠️ Failed to load route <strong>${escapeHTML(ROUTE_ID || String(routeId))}</strong>:<br><code>${escapeHTML(err.message)}</code>`;
     console.error(err);
   }
 }
