@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elden Ring — Ranni Route Completionist Tracker (Routes)</title>
+  <!-- CSS now lives in /public -->
+  <link rel="stylesheet" href="tracker.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Elden Ring — Ranni Route Completionist Tracker</h1>
+      <div class="sub">Full base-game exploration with <strong>Ranni ending</strong>, then unlock <strong>Shadow of the Erdtree</strong> after credits. Progress saves to your browser. Export/Import supported.</div>
+
+      <div class="controls">
+        <!-- Route selector (populated from data/manifest.json) -->
+        <select id="routeSelect" class="btn" title="Choose a route"></select>
+
+        <input id="search" class="search" placeholder="Search: boss, dungeon, NPC, item… (e.g., ‘Radahn’, ‘Seppuku’, ‘Nokron’)" />
+        <label class="pill"><input id="incompleteOnly" type="checkbox" style="margin-right:8px" /> Incomplete only</label>
+        <button id="expandAll" class="btn">Expand all</button>
+        <button id="collapseAll" class="btn">Collapse all</button>
+        <div>
+          <button id="exportBtn" class="btn">Export</button>
+          <button id="importBtn" class="btn">Import</button>
+        </div>
+      </div>
+
+      <div class="kicker small">Filters:</div>
+      <div id="filters" class="tagbar small" aria-label="Type filters"></div>
+      <div class="kicker small">Missables & timing notes are marked <span class="type" data-type="warning">warning</span>. Don’t start NG+ until you finish DLC.</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="globalProgress" class="note small" role="status">Loading…</div>
+    <div id="board" class="grid"></div>
+
+    <div class="note small">
+      <strong>Add your own item:</strong> Label + choose type 
+      <div style="display:flex; gap:8px; margin-top:8px; flex-wrap:wrap; align-items:center">
+        <input id="customLabel" class="search" style="max-width:420px" placeholder="e.g., Farm birds at Palace Approach for runes" />
+        <select id="customType" class="btn">
+          <option value="quest">quest</option>
+          <option value="boss">boss</option>
+          <option value="dungeon">dungeon</option>
+          <option value="npc">npc</option>
+          <option value="gear">gear</option>
+          <option value="talisman">talisman</option>
+          <option value="ash">ash</option>
+          <option value="map">map</option>
+          <option value="warning">warning</option>
+        </select>
+        <button id="addCustom" class="btn">Add to Phase 1</button>
+      </div>
+      <div class="small muted">(You can drag-and-drop your custom item between phases after adding.)</div>
+    </div>
+
+    <p class="small muted" style="margin: 24px 0 60px">Made for Evendyce — moonlit path to the perfect Ranni run. 🌙</p>
+  </main>
+
+  <!-- Single app script. It fetches /public/data/manifest.json and route data files. -->
+  <script src="app.v5.js"></script>
+</body>
+</html>

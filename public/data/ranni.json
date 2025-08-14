@@ -1,0 +1,390 @@
+{
+  "phases": [
+    {
+      "id": "p1",
+      "title": "Phase 1 — Limgrave & Weeping Peninsula (Lv 1–25)",
+      "tag": "Start",
+      "sections": [
+        { "name": "Core Steps", "items": [
+          { "id":"p1-core-1", "type":"quest", "label":"Start as Samurai (Uchigatana bleed base)" },
+          { "id":"p1-core-2", "type":"npc", "label":"Meet White Mask Varre at First Step (do not progress quest yet)" },
+          { "id":"p1-core-3", "type":"quest", "label":"Get Spirit Calling Bell from Renna (Church of Elleh at night)" },
+          { "id":"p1-core-4", "type":"map", "label":"Map: Limgrave West (Gatefront)" },
+          { "id":"p1-core-5", "type":"map", "label":"Map: Limgrave East (Mistwood)" },
+          { "id":"p1-core-6", "type":"map", "label":"Map: Weeping Peninsula" },
+          { "id":"p1-core-7", "type":"gear", "label":"Gather early Smithing Stones (Limgrave Tunnels, Morne Tunnel)"}
+        ]},
+        { "name": "Bosses", "items": [
+          { "id":"p1-boss-1", "type":"boss", "label":"Margit, the Fell Omen (unlock Castle Stormveil; you can delay clear)" },
+          { "id":"p1-boss-2", "type":"boss", "label":"Tree Sentinel (Limgrave)" },
+          { "id":"p1-boss-3", "type":"boss", "label":"Beastman of Farum Azula (Groveside Cave)" },
+          { "id":"p1-boss-4", "type":"boss", "label":"Bloodhound Knight Darriwil (Forlorn Hound Evergaol)" },
+          { "id":"p1-boss-5", "type":"boss", "label":"Flying Dragon Agheel (Dragon-Burnt Ruins lake)" },
+          { "id":"p1-boss-6", "type":"boss", "label":"Crucible Knight (Stormhill Evergaol)" },
+          { "id":"p1-boss-7", "type":"boss", "label":"Tibia Mariner (Summonwater Village)" },
+          { "id":"p1-boss-8", "type":"boss", "label":"Leonine Misbegotten (Castle Morne)"}
+        ]},
+        { "name": "Dungeons & Caves", "items": [
+          { "id":"p1-dun-1", "type":"dungeon", "label":"Groveside Cave" },
+          { "id":"p1-dun-2", "type":"dungeon", "label":"Coastal Cave (Patches link-up later via Murkwater Cave)" },
+          { "id":"p1-dun-3", "type":"dungeon", "label":"Murkwater Cave (Patches)" },
+          { "id":"p1-dun-4", "type":"dungeon", "label":"Murkwater Catacombs" },
+          { "id":"p1-dun-5", "type":"dungeon", "label":"Deathtouched Catacombs" },
+          { "id":"p1-dun-6", "type":"dungeon", "label":"Stormfoot Catacombs" },
+          { "id":"p1-dun-7", "type":"dungeon", "label":"Highroad Cave" },
+          { "id":"p1-dun-8", "type":"dungeon", "label":"Limgrave Tunnels" },
+          { "id":"p1-dun-9", "type":"dungeon", "label":"Earthbore Cave (Weeping)" },
+          { "id":"p1-dun-10", "type":"dungeon", "label":"Impaler’s Catacombs (Weeping)" },
+          { "id":"p1-dun-11", "type":"dungeon", "label":"Tombsward Catacombs (Weeping)" },
+          { "id":"p1-dun-12", "type":"dungeon", "label":"Tombsward Cave (Weeping)" },
+          { "id":"p1-dun-13", "type":"dungeon", "label":"Morne Tunnel (Weeping)"}
+        ]},
+        { "name": "NPC & Quests", "items": [
+          { "id":"p1-npc-1", "type":"npc", "label":"Kenneth Haight → clear Fort Haight (later Varre/Medallion synergy)" },
+          { "id":"p1-npc-2", "type":"npc", "label":"Irina → Castle Morne letter delivery" },
+          { "id":"p1-npc-3", "type":"npc", "label":"Roderika at Stormhill Shack → Spirit Tuning unlock (via Hewg later)" },
+          { "id":"p1-npc-4", "type":"npc", "label":"Sorceress Sellen at Waypoint Ruins (future quest hub)" },
+          { "id":"p1-npc-5", "type":"npc", "label":"D, Hunter of the Dead (Summonwater) → opens Gurranq path" },
+          { "id":"p1-npc-6", "type":"npc", "label":"Blaidd (triggered by merchant’s “howl” in Mistwood)"}
+        ]},
+        { "name": "Key Gear & Ashes", "items": [
+          { "id":"p1-gear-1", "type":"gear", "label":"Reduvia dagger (invader near Murkwater)" },
+          { "id":"p1-gear-2", "type":"ash", "label":"Bloody Slash (Fort Haight Knight) — early bleed art" },
+          { "id":"p1-gear-3", "type":"talisman", "label":"Green Turtle Talisman (Summonwater area underground)"}
+        ]}
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Phase 2 — Liurnia of the Lakes (Lv 25–40)",
+      "tag": "Ranni begins",
+      "sections": [
+        { "name": "Core Steps", "items": [
+          { "id":"p2-core-1", "type":"map", "label":"Maps: Liurnia East + North + West" },
+          { "id":"p2-core-2", "type":"quest", "label":"Open Raya Lucaria (get Academy Glintstone Key from Dragon Smarag isle)" },
+          { "id":"p2-core-3", "type":"quest", "label":"Caria Manor → defeat Royal Knight Loretta → reach Three Sisters" },
+          { "id":"p2-core-4", "type":"quest", "label":"Start Ranni’s Quest at Ranni’s Rise (meet Blaidd, Iji, Seluvis)"}
+        ]},
+        { "name": "Bosses", "items": [
+          { "id":"p2-boss-1", "type":"boss", "label":"Glintstone Dragon Smarag (optional for key island access)" },
+          { "id":"p2-boss-2", "type":"boss", "label":"Red Wolf of Radagon (Academy)" },
+          { "id":"p2-boss-3", "type":"boss", "label":"Rennala, Queen of the Full Moon (respec unlocked)"}
+        ]},
+        { "name": "Dungeons & Caves", "items": [
+          { "id":"p2-dun-1", "type":"dungeon", "label":"Stillwater Cave" },
+          { "id":"p2-dun-2", "type":"dungeon", "label":"Cliffbottom Catacombs" },
+          { "id":"p2-dun-3", "type":"dungeon", "label":"Lakeside Crystal Cave" },
+          { "id":"p2-dun-4", "type":"dungeon", "label":"Academy Crystal Cave" },
+          { "id":"p2-dun-5", "type":"dungeon", "label":"Raya Lucaria Crystal Tunnel" },
+          { "id":"p2-dun-6", "type":"dungeon", "label":"Black Knife Catacombs" },
+          { "id":"p2-dun-7", "type":"dungeon", "label":"Road’s End Catacombs"}
+        ]},
+        { "name": "NPC & Quests", "items": [
+          { "id":"p2-npc-1", "type":"npc", "label":"Thops (Church of Irith) → later give spare Academy key" },
+          { "id":"p2-npc-2", "type":"npc", "label":"Rya (near Laskyar Ruins) → Volcano Manor invitation later" },
+          { "id":"p2-npc-3", "type":"npc", "label":"Hyetta (Shabriri Grapes chain) around Liurnia" },
+          { "id":"p2-npc-4", "type":"npc", "label":"Iji (smith) at Road to the Manor → buy Carian Filigreed Crest" }
+        ]},
+        { "name": "Key Gear & Ashes", "items": [
+          { "id":"p2-gear-1", "type":"talisman", "label":"Carian Filigreed Crest (skill FP reduction — great for Corpse Piler later)" },
+          { "id":"p2-gear-2", "type":"gear", "label":"Glintstone Whetblade / Black Whetblade (infusions, Nokron later for Black)" }
+        ]}
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Phase 3 — Siofra River (Lv 40–50)",
+      "tag": "Underground open",
+      "sections": [
+        { "name": "Core Steps", "items": [
+          { "id":"p3-core-1", "type":"quest", "label":"Enter Siofra River (Mistwood lift) — activate map pillar" },
+          { "id":"p3-core-2", "type":"quest", "label":"Light all flame pillars → fight Ancestor Spirit (optional)" },
+          { "id":"p3-core-3", "type":"npc", "label":"Meet Blaidd in Siofra to keep his quest in sync" }
+        ]},
+        { "name": "Dungeons & Caves", "items": [
+          { "id":"p3-dun-1", "type":"dungeon", "label":"Siofra Aqueduct (Valiant Gargoyles — unlock Deeproot via coffin)"}
+        ]}
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "Phase 4 — Caelid (Lv 50–70)",
+      "tag": "Rot & Power",
+      "sections": [
+        { "name": "Core Steps", "items": [
+          { "id":"p4-core-1", "type":"map", "label":"Map: Caelid + Dragonbarrow" },
+          { "id":"p4-core-2", "type":"quest", "label":"Fort Gael + Fort Faroth sweep" },
+          { "id":"p4-core-3", "type":"gear", "label":"Radagon’s Soreseal (Fort Faroth — huge stats, handle with care)"}
+        ]},
+        { "name": "Bosses", "items": [
+          { "id":"p4-boss-1", "type":"boss", "label":"Commander O’Neil (drops Unalloyed Gold Needle → Millicent chain)" },
+          { "id":"p4-boss-2", "type":"boss", "label":"Decaying Ekzykes (rot dragon) — optional" },
+          { "id":"p4-boss-3", "type":"boss", "label":"Putrid Avatar (Minor Erdtree)" }
+        ]},
+        { "name": "Dungeons & Caves", "items": [
+          { "id":"p4-dun-1", "type":"dungeon", "label":"Sellia Crystal Tunnel" },
+          { "id":"p4-dun-2", "type":"dungeon", "label":"Abandoned Cave (Golden Scarab talisman)" },
+          { "id":"p4-dun-3", "type":"dungeon", "label":"Caelid Catacombs" },
+          { "id":"p4-dun-4", "type":"dungeon", "label":"Gaol Cave" }
+        ]},
+        { "name": "NPC & Quests", "items": [
+          { "id":"p4-npc-1", "type":"npc", "label":"Gowry ↔ Millicent questline (cleanse rot, help/call later)"}
+        ]},
+        { "name": "Key Gear & Ashes", "items": [
+          { "id":"p4-gear-1", "type":"talisman", "label":"Golden Scarab (Abandoned Cave) — +20% runes" },
+          { "id":"p4-gear-2", "type":"ash", "label":"Swarm of Flies (Mohgwyn approach cave — later when accessible)"}
+        ]}
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "Phase 5 — Radahn & Nokron Prelude (Lv 70–90)",
+      "tag": "Festival",
+      "sections": [
+        { "name": "Core Steps", "items": [
+          { "id":"p5-core-1", "type":"quest", "label":"Sync Blaidd, Sellen, Iji conversations (keeps story tidy)" },
+          { "id":"p5-core-2", "type":"quest", "label":"Redmane Castle → Festival of Combat → defeat General Radahn" },
+          { "id":"p5-core-3", "type":"quest", "label":"After Radahn: check in with Blaidd in Siofra; crater opens → Nokron access"}
+        ]}
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "Phase 6 — Altus Plateau & Mt. Gelmir (Lv 90–110)",
+      "tag": "Capital bound",
+      "sections": [
+        { "name": "Core Steps", "items": [
+          { "id":"p6-core-1", "type":"quest", "label":"Grand Lift of Dectus (Left: Fort Haight; Right: Fort Faroth) — ride lift" },
+          { "id":"p6-core-2", "type":"dungeon", "label":"Ruin-Strewn Precipice path (Magma Wyrm Makar) for alternate access" },
+          { "id":"p6-core-3", "type":"quest", "label":"Join Volcano Manor (Rya line) → perform contracts" }
+        ]},
+        { "name": "Bosses", "items": [
+          { "id":"p6-boss-1", "type":"boss", "label":"Ancient Dragon Lansseax (Altus roaming)" },
+          { "id":"p6-boss-2", "type":"boss", "label":"Rykard, Lord of Blasphemy (ends Volcano Manor quest)"}
+        ]},
+        { "name": "Dungeons & Caves", "items": [
+          { "id":"p6-dun-1", "type":"dungeon", "label":"Lux Ruins (Demi-Human Queen Gilika)" },
+          { "id":"p6-dun-2", "type":"dungeon", "label":"Wyndham Catacombs" },
+          { "id":"p6-dun-3", "type":"dungeon", "label":"Seethewater Cave / Fort Laiedd loop" }
+        ]},
+        { "name": "Missables", "items": [
+          { "id":"p6-warn-1", "type":"warning", "label":"Bolt of Gransax (Leyndell) — MUST pick up BEFORE burning the Erdtree (pre-ashen Capital)"}
+        ]}
+      ]
+    },
+    {
+      "id": "p7",
+      "title": "Phase 7 — Ainsel River Main & Deeproot (Lv 100–120)",
+      "tag": "Ranni deep",
+      "sections": [
+        { "name": "Core Steps", "items": [
+          { "id":"p7-core-1", "type":"quest", "label":"Give Fingerslayer Blade (from Nokron) to Ranni → unlock Renna’s Rise" },
+          { "id":"p7-core-2", "type":"quest", "label":"Enter Ainsel River Main via Renna’s Rise → talk to Miniature Ranni (3x at grace)" },
+          { "id":"p7-core-3", "type":"quest", "label":"Defeat Baleful Shadow → obtain Discarded Palace Key" },
+          { "id":"p7-core-4", "type":"quest", "label":"Use key at Raya Lucaria Grand Library chest → acquire Dark Moon Ring" },
+          { "id":"p7-core-5", "type":"quest", "label":"Progress Nokstella → Lake of Rot → Grand Cloister → Astel, Naturalborn of the Void" },
+          { "id":"p7-core-6", "type":"quest", "label":"Deeproot Depths (via Gargoyles coffin) → Fia’s Champions → Lichdragon Fortissax (optional)"}
+        ]}
+      ]
+    },
+    {
+      "id": "p8",
+      "title": "Phase 8 — Nokron & Night’s Sacred Ground (Lv 110–120)",
+      "tag": "Moonlit city",
+      "sections": [
+        { "name": "Core Steps", "items": [
+          { "id":"p8-core-1", "type":"boss", "label":"Mimic Tear (boss) → unlock swap/duel arena" },
+          { "id":"p8-core-2", "type":"gear", "label":"Black Whetblade (weapon affinity flexibility)" },
+          { "id":"p8-core-3", "type":"gear", "label":"Fingerslayer Blade (key item for Ranni)" },
+          { "id":"p8-core-4", "type":"talisman", "label":"Silver Tear Mask (Arcane boost)" }
+        ]}
+      ]
+    },
+    {
+      "id": "p9",
+      "title": "Phase 9 — Mountaintops of the Giants & Haligtree (Lv 120–150)",
+      "tag": "Endgame prep",
+      "sections": [
+        { "name": "Core Steps", "items": [
+          { "id":"p9-core-1", "type":"boss", "label":"Fire Giant (required)" },
+          { "id":"p9-core-2", "type":"quest", "label":"Consecrated Snowfield (Haligtree Secret Medallion: Left from Albus in Liurnia; Right from Castle Sol after Commander Niall)" },
+          { "id":"p9-core-3", "type":"boss", "label":"Commander Niall (Castle Sol) → Haligtree medallion right" },
+          { "id":"p9-core-4", "type":"quest", "label":"Ordina Liturgical Town puzzle → Haligtree access" },
+          { "id":"p9-core-5", "type":"boss", "label":"Loretta, Knight of the Haligtree (gate boss)" },
+          { "id":"p9-core-6", "type":"boss", "label":"Malenia, Blade of Miquella (optional, completionist)"}
+        ]},
+        { "name": "Mohgwyn & Bleed Power", "items": [
+          { "id":"p9-bleed-1", "type":"quest", "label":"Varre’s quest → Pureblood Knight’s Medal (fast Mohgwyn access)" },
+          { "id":"p9-bleed-2", "type":"boss", "label":"Mohg, Lord of Blood (DO NOT touch cocoon yet — DLC later)" },
+          { "id":"p9-bleed-3", "type":"ash", "label":"Seppuku Ash of War (Freezing Lake region scarab — Mountaintops)"}
+        ]}
+      ]
+    },
+    {
+      "id": "p10",
+      "title": "Phase 10 — Crumbling Farum Azula & Finale",
+      "tag": "Elden Lord path",
+      "sections": [
+        { "name": "Core Steps", "items": [
+          { "id":"p10-core-1", "type":"boss", "label":"Godskin Duo" },
+          { "id":"p10-core-2", "type":"boss", "label":"Dragonlord Placidusax (optional secret arena)" },
+          { "id":"p10-core-3", "type":"boss", "label":"Maliketh, the Black Blade" },
+          { "id":"p10-core-4", "type":"quest", "label":"Return to Capital (ashen) → final boss sequence" },
+          { "id":"p10-core-5", "type":"quest", "label":"Choose Ranni’s ending (summon sign)"}
+        ]}
+      ]
+    },
+    {
+      "id": "p11",
+      "title": "Phase 11 — DLC Entry (Post-Credits)",
+      "tag": "Shadow of the Erdtree",
+      "sections": [
+        { "name": "DLC Access", "items": [
+          { "id":"p11-core-1", "type":"quest", "label":"Return to Mohg’s arena → Touch Miquella’s cocoon → Enter DLC" },
+          { "id":"p11-core-2", "type":"warning", "label":"Do NOT start NG+ until you finish DLC on this save"}
+        ]}
+      ]
+    },
+    {
+      "id": "npcx",
+      "title": "Global NPC Quest Breakpoints",
+      "tag": "Questlines",
+      "sections": [
+        { "name": "Millicent (Scarlet Rot / Prosthesis)", "items": [
+          { "id":"q-mil-1", "type":"npc", "label":"Gowry in Caelid → accept to cure Millicent (Church of the Plague)"},
+          { "id":"q-mil-2", "type":"npc", "label":"Beat Commander O’Neil → Unalloyed Gold Needle → return to Gowry"},
+          { "id":"q-mil-3", "type":"npc", "label":"Cure Millicent → talk until loop; rest → talk again"},
+          { "id":"q-mil-4", "type":"npc", "label":"Sellia: light towers / open gates → continue dialogue chain"},
+          { "id":"q-mil-5", "type":"npc", "label":"Altus: meet Millicent (Erdtree-Gazing Hill / Windmill Village) → talk"},
+          { "id":"q-mil-6", "type":"npc", "label":"Shaded Castle: get Valkyrie’s Prosthesis → give to Millicent"},
+          { "id":"q-mil-7", "type":"npc", "label":"Dominula: Godskin Apostle → speak to Millicent again"},
+          { "id":"q-mil-8", "type":"npc", "label":"Snowfield/Haligtree: meet Millicent near Drainage Channel (signs appear)"},
+          { "id":"q-mil-9", "type":"npc", "label":"CHOICE: Help Millicent (gold sign) → Rotten Winged Sword Insignia OR Invade → Millicent’s Prosthesis"}
+        ]},
+        { "name": "Sellen (Sorcery / Teacher vs Witch)", "items": [
+          { "id":"q-sel-1", "type":"npc", "label":"Waypoint Ruins: accept Sellen as master"},
+          { "id":"q-sel-2", "type":"npc", "label":"Primeval Sorcerers: Azur (Mt. Gelmir), Lusat (Sellia Hideaway)"},
+          { "id":"q-sel-3", "type":"npc", "label":"Return glintstones; Witchbane step"},
+          { "id":"q-sel-4", "type":"npc", "label":"Raya Lucaria finale: help Sellen (gold) or Jerren (red)"}
+        ]},
+        { "name": "Nepheli / Kenneth / Gostoc (Stormveil)", "items": [
+          { "id":"q-nep-1", "type":"npc", "label":"Meet Nepheli at Stormveil → beat Godrick → speak in Roundtable"},
+          { "id":"q-nep-2", "type":"npc", "label":"Kenneth Haight → clear Fort Haight → promise a new lord"},
+          { "id":"q-nep-3", "type":"npc", "label":"Avoid giving Seluvis’s potion to Nepheli (keep Ranni route clean)"},
+          { "id":"q-nep-4", "type":"npc", "label":"Resolve trio in Godrick’s throne room → Ancient Dragon Smithing Stone path"}
+        ]},
+        { "name": "Rya → Volcano Manor", "items": [
+          { "id":"q-rya-1", "type":"npc", "label":"Meet Rya in Liurnia (recover necklace) → Volcano Manor invite"},
+          { "id":"q-rya-2", "type":"npc", "label":"Do assassination letters; talk to Rya/Tanith between kills"},
+          { "id":"q-rya-3", "type":"npc", "label":"Progress to Rykard → conclude Rya’s story"}
+        ]},
+        { "name": "Fia / D / Gurranq", "items": [
+          { "id":"q-fia-1", "type":"npc", "label":"D at Summonwater → Roundtable"},
+          { "id":"q-fia-2", "type":"npc", "label":"Deliver Deathroot to Gurranq (Bestial incants)"},
+          { "id":"q-fia-3", "type":"npc", "label":"Altus: give Weathered Dagger to D’s brother"},
+          { "id":"q-fia-4", "type":"npc", "label":"Deeproot: Fia’s Champions → (opt) Fortissax"}
+        ]},
+        { "name": "Hyetta (Frenzied Flame)", "items": [
+          { "id":"q-hye-1", "type":"npc", "label":"Deliver Shabriri Grapes across Liurnia"},
+          { "id":"q-hye-2", "type":"npc", "label":"Stops at Gatefront / Purified Ruins / Bellum Church"},
+          { "id":"q-hye-3", "type":"warning", "label":"Frenzied Flame path can lock endings; be cautious"}
+        ]},
+        { "name": "Boc the Seamster", "items": [
+          { "id":"q-boc-1", "type":"npc", "label":"Find Boc (the “bush” in Limgrave) → give Sewing Needle"},
+          { "id":"q-boc-2", "type":"npc", "label":"Golden Sewing Needle → tailor demigod gear"}
+        ]},
+        { "name": "Dung Eater", "items": [
+          { "id":"q-dung-1", "type":"npc", "label":"Message at Roundtable → Shunning-Grounds"},
+          { "id":"q-dung-2", "type":"npc", "label":"Collect Seedbed Curses → choose path (ending-affecting)"}
+        ]},
+        { "name": "Patches", "items": [
+          { "id":"q-pat-1", "type":"npc", "label":"Murkwater Cave fight → spare → merchant"},
+          { "id":"q-pat-2", "type":"npc", "label":"Relocations: Scenic Isle → Volcano Manor"}
+        ]},
+        { "name": "Alexander the Warrior Jar", "items": [
+          { "id":"q-alx-1", "type":"npc", "label":"Rescue in Stormhill → Gael Tunnel → Radahn festival"},
+          { "id":"q-alx-2", "type":"npc", "label":"Mt. Gelmir hot springs → Farum Azula finale"}
+        ]},
+        { "name": "Varre / Yura → Eleonora", "items": [
+          { "id":"q-var-1", "type":"npc", "label":"Varre at First Step → Rose Church invasions"},
+          { "id":"q-var-2", "type":"npc", "label":"Pureblood Knight’s Medal (Mohgwyn access)"},
+          { "id":"q-yur-1", "type":"npc", "label":"Yura (Bloody Finger Hunter) → Eleonora (Poleblade)"}
+        ]},
+        { "name": "Diallos & Jarburg", "items": [
+          { "id":"q-dia-1", "type":"npc", "label":"Diallos: Roundtable → Liurnia → Volcano Manor"},
+          { "id":"q-dia-2", "type":"npc", "label":"Finish in Jarburg with Jar-Bairn → Ancient Dragon Smithing Stone path"}
+        ]}
+      ]
+    },
+    {
+      "id": "micro",
+      "title": "Regional Micro‑Beats — Catacombs / Caves / Evergaols",
+      "tag": "All side dungeons",
+      "sections": [
+        { "name": "Limgrave & Weeping Peninsula", "items": [
+          { "id":"m-lg-1", "type":"dungeon", "label":"Groveside Cave"},
+          { "id":"m-lg-2", "type":"dungeon", "label":"Coastal Cave → Murkwater Cave (Patches)"},
+          { "id":"m-lg-3", "type":"dungeon", "label":"Murkwater / Deathtouched / Stormfoot Catacombs"},
+          { "id":"m-lg-4", "type":"dungeon", "label":"Highroad Cave / Limgrave Tunnels"},
+          { "id":"m-lg-5", "type":"dungeon", "label":"Earthbore Cave / Tombsward Catacombs / Impaler’s Catacombs / Tombsward Cave / Morne Tunnel"},
+          { "id":"m-lg-6", "type":"dungeon", "label":"Evergaols: Forlorn Hound (Darriwil), Stormhill (Crucible Knight)"}
+        ]},
+        { "name": "Liurnia of the Lakes", "items": [
+          { "id":"m-liu-1", "type":"dungeon", "label":"Stillwater / Cliffbottom / Lakeside Crystal Caves"},
+          { "id":"m-liu-2", "type":"dungeon", "label":"Road’s End / Black Knife Catacombs / Raya Lucaria Crystal Tunnel / Academy Crystal Cave"},
+          { "id":"m-liu-3", "type":"dungeon", "label":"Evergaols: Cuckoo’s / Royal Grave (Adan)"}
+        ]},
+        { "name": "Caelid & Dragonbarrow", "items": [
+          { "id":"m-cae-1", "type":"dungeon", "label":"Gaol Cave / Caelid Catacombs / Abandoned Cave (Golden Scarab)"},
+          { "id":"m-cae-2", "type":"dungeon", "label":"Sellia Crystal Tunnel / Gael Tunnel (Limgrave ↔ Caelid)"},
+          { "id":"m-cae-3", "type":"dungeon", "label":"Divine Tower Caelid basement (Godskin Apostle) — tough optional"}
+        ]},
+        { "name": "Altus Plateau & Mt. Gelmir", "items": [
+          { "id":"m-alt-1", "type":"dungeon", "label":"Lux Ruins / Old Altus Tunnel / Altus Tunnel / Wyndham Catacombs / Perfumer’s Grotto"},
+          { "id":"m-alt-2", "type":"dungeon", "label":"Seethewater Cave / Volcano Cave / Gelmir Hero’s Grave"},
+          { "id":"m-alt-3", "type":"dungeon", "label":"Evergaols: Golden Lineage, Shaded Castle outskirts (Omenkiller)"}
+        ]},
+        { "name": "Leyndell & Capital Outskirts", "items": [
+          { "id":"m-leyn-1", "type":"dungeon", "label":"Subterranean Shunning-Grounds (Leyndell Catacombs / Mohg, the Omen)"},
+          { "id":"m-leyn-2", "type":"dungeon", "label":"Sealed Tunnel → Divine Tower of West Altus"}
+        ]},
+        { "name": "Mountaintops / Consecrated Snowfield", "items": [
+          { "id":"m-mtg-1", "type":"dungeon", "label":"Giants’ Mountaintop Catacombs / Spiritcaller Cave"},
+          { "id":"m-mtg-2", "type":"dungeon", "label":"Castle Sol / Heretical Rise / First Church of Marika (tear)"},
+          { "id":"m-mtg-3", "type":"dungeon", "label":"Consecrated Snowfield Catacombs / Yelough Anix Tunnel / Cave"}
+        ]},
+        { "name": "Underground & Eternal Cities", "items": [
+          { "id":"m-und-1", "type":"dungeon", "label":"Siofra River (pylons, Ancestor Spirit)"},
+          { "id":"m-und-2", "type":"dungeon", "label":"Nokron: Night’s Sacred Ground, Mimic arena, Black Whetblade"},
+          { "id":"m-und-3", "type":"dungeon", "label":"Ainsel River / Ainsel Main / Nokstella → Lake of Rot"},
+          { "id":"m-und-4", "type":"dungeon", "label":"Deeproot Depths (Prince of Death’s Throne)"}
+        ]},
+        { "name": "Haligtree & Farum Azula", "items": [
+          { "id":"m-hal-1", "type":"dungeon", "label":"Haligtree Town → Elphael, Brace of the Haligtree"},
+          { "id":"m-hal-2", "type":"dungeon", "label":"Crumbling Farum Azula (Dragon Temple side areas)"}
+        ]}
+      ]
+    },
+    {
+      "id": "leg",
+      "title": "Optional — Legendary Collections & Extras",
+      "tag": "Collectors",
+      "sections": [
+        { "name": "Legendary Armaments (missables!)", "items": [
+          { "id":"leg-arm-1", "type":"warning", "label":"Bolt of Gransax (Leyndell) — get BEFORE Ashen Capital" },
+          { "id":"leg-arm-2", "type":"gear", "label":"Dark Moon Greatsword (end of Ranni quest chain)" },
+          { "id":"leg-arm-3", "type":"gear", "label":"Ruins Greatsword (Misbegotten Warrior + Crucible Knight duo in Redmane pre-festival)"}
+        ]},
+        { "name": "Legendary Ashes", "items": [
+          { "id":"leg-ash-1", "type":"gear", "label":"Mimic Tear (Nokron)" },
+          { "id":"leg-ash-2", "type":"gear", "label":"Black Knife Tiche (Moonlight Altar — Alecto Evergaol after Ranni)"}
+        ]},
+        { "name": "Bleed Build Staples", "items": [
+          { "id":"leg-bld-1", "type":"talisman", "label":"Lord of Blood’s Exultation (Leyndell Catacombs)" },
+          { "id":"leg-bld-2", "type":"gear", "label":"White Mask (Mohgwyn — invaders near lake)" },
+          { "id":"leg-bld-3", "type":"gear", "label":"Rivers of Blood (Church of Repose — Mountaintops)"}
+        ]}
+      ]
+    }
+  ]
+}

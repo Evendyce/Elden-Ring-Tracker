@@ -1,0 +1,88 @@
+/* Elden Ring — Ranni Route Completionist Tracker (CSS v2)
+   Changes:
+   - Single-column layout always
+   - Phase cards are collapsible (<details class="card"><summary>…)</summary>
+*/
+:root {
+  --bg: #0b0f14;
+  --card: #0f1720;
+  --muted: #9fb0c2;
+  --text: #e7f0f9;
+  --accent: #8bd3ff;
+  --accent-2: #9b8cff;
+  --danger: #ff9ba8;
+  --ok: #94f9c3;
+  --warn: #ffd37a;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji";
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(139,211,255,.08), transparent),
+    radial-gradient(1200px 600px at 120% 10%, rgba(155,140,255,.08), transparent),
+    var(--bg);
+  color: var(--text);
+}
+header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(10px); background: linear-gradient(180deg, rgba(11,15,20,.9), rgba(11,15,20,.6)); border-bottom: 1px solid rgba(255,255,255,.06); }
+.wrap { max-width: 1000px; margin: 0 auto; padding: 18px 20px; }
+
+h1 { margin: 0; font-size: 1.5rem; letter-spacing: .3px; }
+.sub { color: var(--muted); font-size: .95rem; margin-top: 6px; }
+
+.controls { display: grid; grid-template-columns: 1fr auto auto auto auto; gap: 10px; margin-top: 14px; align-items: center; }
+.search { width: 100%; padding: 10px 12px; border-radius: 10px; outline: none; border: 1px solid rgba(255,255,255,.08); background: #0c141e; color: var(--text); }
+.btn { padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,.08); background: #101b28; color: var(--text); cursor: pointer; transition: .2s ease; }
+.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+.pill { display: inline-flex; gap: 8px; align-items: center; padding: 8px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,.08); background: #0c141e; color: var(--muted); font-size: .9rem; }
+
+/* Single-column board */
+.grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 18px 0 40px; }
+
+/* Phase card as <details> */
+.card { border: 1px solid rgba(255,255,255,.08); background: var(--card); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+.card>summary { display:flex; gap:10px; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,.06); cursor: pointer; list-style: none; }
+.card>summary::-webkit-details-marker { display: none; }
+.title { display: flex; gap: 10px; align-items: center; font-weight: 700; }
+.phase-tag { font-size: .8rem; padding: 4px 8px; border-radius: 999px; background: rgba(139,211,255,.12); color: var(--accent); border: 1px solid rgba(139,211,255,.35); }
+.progress { color: var(--muted); font-size: .85rem; }
+.bar { height: 6px; width: 100%; border-radius: 999px; background: rgba(255,255,255,.06); overflow: hidden; margin-top: 8px; }
+.bar>span { display: block; height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width .35s ease; }
+
+/* Inner details blocks for sections */
+details { border-top: 1px dashed rgba(255,255,255,.08); }
+summary { list-style: none; cursor: pointer; padding: 14px 16px; font-weight: 600; color: var(--text); display: flex; align-items: center; justify-content: space-between; }
+summary .sublabel { color: var(--muted); font-weight: 500; font-size: .9rem; margin-left: 8px; }
+summary::-webkit-details-marker { display: none; }
+.section { padding: 8px 16px 16px; display: grid; gap: 8px; }
+
+/* Items */
+.item { display: grid; grid-template-columns: 24px 1fr auto; align-items: start; gap: 10px; padding: 8px; border-radius: 10px; transition: .2s ease; }
+.item:hover { background: rgba(255,255,255,.04); }
+.item input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; }
+.label { line-height: 1.35; }
+
+/* Type badges */
+.type { font-size: .75rem; padding: 4px 8px; border-radius: 999px; border: 1px solid rgba(255,255,255,.1); color: var(--muted); }
+.type[data-type="boss"] { color: #ffb4b4; border-color: rgba(255, 180, 180,.35); background: rgba(255, 180, 180,.08); }
+.type[data-type="dungeon"] { color: #ffd699; border-color: rgba(255, 214, 153,.35); background: rgba(255, 214, 153,.08); }
+.type[data-type="npc"] { color: #b2e1ff; border-color: rgba(178, 225, 255,.35); background: rgba(178, 225, 255,.08); }
+.type[data-type="gear"], .type[data-type="talisman"], .type[data-type="ash"], .type[data-type="map"] { color: #a2ffc7; border-color: rgba(162, 255, 199,.35); background: rgba(162, 255, 199,.08); }
+.type[data-type="quest"] { color: #e0c3ff; border-color: rgba(224,195,255,.35); background: rgba(224,195,255,.08); }
+.type[data-type="warning"] { color: var(--warn); border-color: rgba(255,211,122,.35); background: rgba(255,211,122,.1); }
+
+.muted { color: var(--muted); font-size: .9rem; }
+.kicker { color: var(--muted); font-size: .9rem; margin: 10px 0 0; }
+.footer { display: flex; gap: 10px; justify-content: space-between; align-items: center; padding: 14px 16px; border-top: 1px solid rgba(255,255,255,.06); }
+
+.tagbar { display: flex; flex-wrap: wrap; gap: 8px; }
+.tagbar .tag { font-size: .8rem; padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,.1); cursor: pointer; user-select: none; }
+.tag.active { background: rgba(139,211,255,.14); border-color: rgba(139,211,255,.4); color: var(--accent); }
+
+.danger { color: var(--danger); }
+.ok { color: var(--ok); }
+.note { padding: 12px 14px; border: 1px dashed rgba(255,255,255,.15); border-radius: 12px; background: #0d1219; }
+.small { font-size: .88rem; }
+.ghost { opacity: .5; }
