@@ -57,6 +57,7 @@ summary { list-style: none; cursor: pointer; padding: 14px 16px; font-weight: 60
 summary .sublabel { color: var(--muted); font-weight: 500; font-size: .9rem; margin-left: 8px; }
 summary::-webkit-details-marker { display: none; }
 .section { padding: 8px 16px 16px; display: grid; gap: 8px; }
+.section.drop { outline: 2px dashed var(--accent); outline-offset: 4px; }
 
 /* Items */
 .item { display: grid; grid-template-columns: 24px 1fr auto; align-items: start; gap: 10px; padding: 8px; border-radius: 10px; transition: .2s ease; }
